@@ -11,11 +11,12 @@
 		<?php
 		
 			$start_input = $_POST['startdate'];
+			$end_input   = $_POST['enddate'];
 		
 			$start_date = new DateTime($start_input); //RETRIEVE FROM FORM
 			
-			$end_date	= new DateTime("2016-12-19"); //RETRIEVE FROM FORM
-					
+			$end_date	= new DateTime($end_input); //RETRIEVE FROM FORM
+								
 			$interval = $start_date->diff($end_date);
 			
 			//Calculate days before next tier drop off
@@ -31,7 +32,8 @@
 			echo floor($twenty_percent) . ' days to 60% refund' . '<br />';
 			
 			//print start date on website *
-			echo 'class start date' . (string)date_format($start_date, 'm-d-Y');
+			echo '<br />class start date ' . (string)date_format($start_date, 'm-d-Y') . '<br />';
+			echo 'class end date' . (string)date_format($end_date, 'm-d-Y');
 			
 			date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
 			

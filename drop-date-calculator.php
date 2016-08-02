@@ -10,7 +10,10 @@
 		
 		<?php
 		
-			$start_date = new DateTime("2016-08-29"); //RETRIEVE FROM FORM
+			$start_input = $_POST['startdate'];
+		
+			$start_date = new DateTime($start_input); //RETRIEVE FROM FORM
+			
 			$end_date	= new DateTime("2016-12-19"); //RETRIEVE FROM FORM
 					
 			$interval = $start_date->diff($end_date);
@@ -27,8 +30,10 @@
 			echo floor($eleven_percent) . ' days to 80% refund' . '<br />';
 			echo floor($twenty_percent) . ' days to 60% refund' . '<br />';
 			
-			date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
+			//print start date on website *
+			echo 'class start date' . (string)date_format($start_date, 'm-d-Y');
 			
+			date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
 			
 			echo '<br /><br />RESULTS<br />';
 			//echo date for 80% refund

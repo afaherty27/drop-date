@@ -7,4 +7,5 @@ $(document).ready(function() {
 	
 	//STEP 3
 	//datepicker on end date
+	$("#enddate").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
 });

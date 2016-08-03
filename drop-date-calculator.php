@@ -92,10 +92,8 @@
 			is completed/recorded and will be issued in compliance with the 
 			college refund policy.
 		</p>
-		<!--make pop up in new window -->
+		
 		<a href="https://madisoncollege.edu/enrollment-terms-conditions"
 		   target="_blank">Refund Policy</a>
-			
-
 	</body>
 </html>

@@ -27,26 +27,49 @@
 	<body>
 		
 		<h1>Refund Estimation Calculator</h1>
-		<table id="enteredDates">
-			<tr class="row">
-				<td class="blurb">Course start date</td>
-				<td class="enteredDate">
+		<div id="enteredDates">
+			<div class="row">
+				<div class="blurb">
+					Course start date
+				</div><!-- end blurb -->
+				<div class="enteredDate">
 					<?php
 						print $start_input;
 					?>
-				</td>
-			</tr>
-			<tr class="row">
-				<td class="blurb">Course end date</td>
-				<td class="enteredDate">
+				</div> <!-- end row -->
+			</div> <!--end row -->
+			<div class="row">
+				<div class="blurb">
+					Course end date
+				</div> <!--end blurb -->
+				<div class="enteredDate">
 					<?php
 						print $end_input;
 					?>
-				</td>
-			</tr>
-		</table>
+				</div> <!-- end enteredDate -->
+			</div> <!-- end row -->
+		</div> <!-- end enteredDates -->
+		
+		<div id="results">
+			<div class="row">
+				<div class="resultText">
+					To recieve an 80% refund for this class, students must 
+					drop before:
+				</div> <!-- end resultText -->
+				<div class="resultValue">
+				</div> <!--end resultValue -->
+			</div> <!--end row -->
+			<div class="row">
+				<div class="resultText">
+					To recieve a 60% refund for this class, students must 
+					drop before:
+				</div> <!-- end resultText -->
+				<div class="resultValue"></div> <!--end resultValue -->
+			</div> <!--end row -->
+		</div> <!--end results -->
 		<?php				
-			date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
+			date_add($start_date, 
+				date_interval_create_from_date_string($eleven_percent . 'days'));
 			
 			//echo '<br /><br />RESULTS<br />';
 			//echo date for 80% refund
@@ -63,14 +86,15 @@
 		
 		<p>
 			This refund estimation calculator is provided to offer guidance and
-			estimation of refund levels based on the start and end date of a class
-			as indicated in the class scheduling system.  Actual refunds will be 
-			processed based on the date the drop enrollemnt transaction is 
-			completed/recorded and will be issued in compliance with the college
-			refund policy
+			estimation of refund levels based on the start and end date of a 
+			class as indicated in the class scheduling system.  Actual refunds 
+			will be processed based on the date the drop enrollemnt transaction 
+			is completed/recorded and will be issued in compliance with the 
+			college refund policy.
 		</p>
 		<!--make pop up in new window -->
-		<a href="https://madisoncollege.edu/enrollment-terms-conditions">Refund Policy</a>
+		<a href="https://madisoncollege.edu/enrollment-terms-conditions"
+		   target="_blank">Refund Policy</a>
 			
 
 	</body>

@@ -120,5 +120,6 @@
 		
 		<a href="https://madisoncollege.edu/enrollment-terms-conditions"
 		   target="_blank">Refund Policy</a>
+		<a href="drop-date-calculator.html">Change Dates</a>   
 	</body>
 </html>

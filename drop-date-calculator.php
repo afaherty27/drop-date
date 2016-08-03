@@ -15,7 +15,9 @@
 	
 	//Calculate days before next tier drop off
 	$eleven_percent = (string)floor($interval->days*0.11);
-	$twenty_percent = (string)floor($interval->days*0.2);		
+	$twenty_percent = (string)floor($interval->days*0.2);	
+
+	
 ?>  
   
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -57,6 +59,19 @@
 					drop before:
 				</div> <!-- end resultText -->
 				<div class="resultValue">
+					<!-- 80% result -->
+					<?php
+						//add 11% value to start date to find first result
+						date_add($start_date, 
+							date_interval_create_from_date_string(
+								$eleven_percent . 'days'));
+						//display to screen		
+						print (string)date_format($start_date, 'm-d-Y');
+						//return startdate value to original date
+						date_sub($start_date, 
+							date_interval_create_from_date_string(
+							$eleven_percent . 'days'));
+					?>
 				</div> <!--end resultValue -->
 			</div> <!--end row -->
 			<div class="row">
@@ -64,12 +79,22 @@
 					To recieve a 60% refund for this class, students must 
 					drop before:
 				</div> <!-- end resultText -->
-				<div class="resultValue"></div> <!--end resultValue -->
+				<div class="resultValue">
+					<!-- 60% result -->
+					<?php
+						//add 20% to the start date for 2nd result
+						date_add($start_date, 
+							date_interval_create_from_date_string(
+							$twenty_percent . 'days'));
+						//display to screen
+						print (string)date_format($start_date, 'm-d-Y')
+					?>
+				</div> <!--end resultValue -->
 			</div> <!--end row -->
 		</div> <!--end results -->
 		<?php				
-			date_add($start_date, 
-				date_interval_create_from_date_string($eleven_percent . 'days'));
+			//date_add($start_date, 
+			//	date_interval_create_from_date_string($eleven_percent . 'days'));
 			
 			//echo '<br /><br />RESULTS<br />';
 			//echo date for 80% refund

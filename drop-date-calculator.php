@@ -1,23 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  
+<?php
+	
+	//vars to hold date values
+	$start_input = $_POST['startdate'];
+	$end_input   = $_POST['enddate'];
+	
+	// convert input Strings to DateTime objects
+	$start_date = new DateTime($start_input); 	
+	$end_date	= new DateTime($end_input); 
+	
+	//calculate how many days between entered dates	
+	$interval = $start_date->diff($end_date);
+			
+?>  
+  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Drop Date Calulator</title>
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Drop Date Calulator</title>
+	</head>
 	
 	<body>
 		
-		<?php
-		
-			$start_input = $_POST['startdate'];
-			$end_input   = $_POST['enddate'];
-		
-			$start_date = new DateTime($start_input); //RETRIEVE FROM FORM
+
 			
-			$end_date	= new DateTime($end_input); //RETRIEVE FROM FORM
-								
-			$interval = $start_date->diff($end_date);
+		<h1>Refund Estimation Calculator</h1>
+		
+		<?php
 			
 			//Calculate days before next tier drop off
 			$eleven_percent = (string)floor($interval->days*0.11);
@@ -38,8 +49,7 @@
 			
 			
 		?>
-		<h1>Refund Estimation Calculator</h1>
-		
+			
 
 	</body>
 </html>

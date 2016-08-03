@@ -46,9 +46,11 @@
 			
 			date_add($start_date, date_interval_create_from_date_string($twenty_percent . 'days'));
 			//echo date for 60% refund
-			echo 'To recieve a 60% refund for this class, students must drop before: ' . (string)date_format($start_date, 'm-d-Y');
+			//echo 'To recieve a 60% refund for this class, students must drop before: ' . (string)date_format($start_date, 'm-d-Y');
 			
 			
 		?>
+		<h1>Refund Estimation Calculator</h1>
+		
 	</body>
 </html>

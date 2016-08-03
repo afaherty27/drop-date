@@ -22,24 +22,12 @@
 			//Calculate days before next tier drop off
 			$eleven_percent = (string)floor($interval->days*0.11);
 			$twenty_percent = (string)floor($interval->days*0.2);
-			
-						
-			//print how many days in semester
-			echo $interval->format('%a day(s)') . '<br />';
-			
-			//print how many days from semester beinging til drop date
-			echo floor($eleven_percent) . ' days to 80% refund' . '<br />';
-			echo floor($twenty_percent) . ' days to 60% refund' . '<br />';
-			
-			//print start date on website *
-			echo '<br />class start date ' . (string)date_format($start_date, 'm-d-Y') . '<br />';
-			echo 'class end date' . (string)date_format($end_date, 'm-d-Y');
-			
+					
 			date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
 			
-			echo '<br /><br />RESULTS<br />';
+			//echo '<br /><br />RESULTS<br />';
 			//echo date for 80% refund
-			echo 'To receive an 80% refund for this class, students must drop before: ' . (string)date_format($start_date, 'm-d-Y') .  '<br />';
+			//echo 'To receive an 80% refund for this class, students must drop before: ' . (string)date_format($start_date, 'm-d-Y') .  '<br />';
 			
 			//subtract the 11% that was added
 			date_sub($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
@@ -52,5 +40,6 @@
 		?>
 		<h1>Refund Estimation Calculator</h1>
 		
+
 	</body>
 </html>

@@ -2,8 +2,8 @@
 	Author: Adam Faherty
 **/
 
-.enteredDate, .resultText, .resultValue {
-	
+
+.blurb, .enteredDate, .resultText, .resultValue  {
 	display: inline-block;
 }
 
@@ -32,3 +32,12 @@
 	/*background-color: orange;*/
 }
 
+#disclaimer {
+	width: 33%;
+	text-align: center;
+}
+
+#refundPolicy {
+	text-align: center;
+	display: block;
+}

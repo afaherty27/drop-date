@@ -24,11 +24,26 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Drop Date Calulator</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="drop-date.js"></script>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
 	</head>
 	
 	<body>
 		
 		<h1>Refund Estimation Calculator</h1>
+		
+		<form method="post" action="drop-date-calculator.php">
+			<label for="startdate">Course Start Date</label>
+			<input type="text" id="startdate" name="startdate" /><br />
+		
+			<label for="enddate">Course End Date</label>
+			<input type="text" id="enddate" name="enddate" /><br />
+    
+			<input type="submit" value="Calculate" name="submit" />
+		</form>
+		
 		<div id="enteredDates">
 			<div class="row">
 				<div class="blurb">

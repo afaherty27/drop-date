@@ -24,10 +24,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Drop Date Calulator</title>
+		<link rel="stylesheet" href="drop-date-calculator.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="drop-date.js"></script>
 		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+		
 	</head>
 	
 	<body>
@@ -124,7 +126,7 @@
 		?>
 		
 		
-		<p>
+		<p id="disclaimer">
 			This refund estimation calculator is provided to offer guidance and
 			estimation of refund levels based on the start and end date of a 
 			class as indicated in the class scheduling system.  Actual refunds 
@@ -134,6 +136,6 @@
 		</p>
 		
 		<a href="https://madisoncollege.edu/enrollment-terms-conditions"
-		   target="_blank">Refund Policy</a>  
+		   target="_blank" id="refundPolicy">Refund Policy</a>  
 	</body>
 </html>

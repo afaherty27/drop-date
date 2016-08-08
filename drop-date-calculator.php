@@ -133,9 +133,11 @@
 			will be processed based on the date the drop enrollemnt transaction 
 			is completed/recorded and will be issued in compliance with the 
 			college refund policy.
+			
+			<a href="https://madisoncollege.edu/enrollment-terms-conditions"
+		   target="_blank" id="refundPolicy">Refund Policy</a>
 		</p>
 		
-		<a href="https://madisoncollege.edu/enrollment-terms-conditions"
-		   target="_blank" id="refundPolicy">Refund Policy</a>  
+		
 	</body>
 </html>

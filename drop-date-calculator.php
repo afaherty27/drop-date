@@ -43,53 +43,50 @@
 			<label class="blurb" for="enddate">Course End Date</label>
 			<input type="text" id="enddate" value="<?php print $end_input ?>"name="enddate" /><br />
     
+			<div id="results">			
+				<div class="row">				
+					<div class="resultText">					
+						To recieve an 80% refund for this class, students must 
+						drop before:
+					</div> <!-- end resultText -->
+					
+					<div class="resultValue">					
+						<!-- 80% result -->
+						<?php						
+							//add 11% value to start date to find first result
+							date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
+							//display to screen		
+							print (string)date_format($start_date, 'm-d-Y');
+							//return startdate value to original date
+							date_sub($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
+						?>
+					</div> <!--end resultValue -->
+				</div> <!--end row -->
+				
+				<div class="row">				
+					<div class="resultText">					
+						To recieve a 60% refund for this class, students must 
+						drop before:
+					</div> <!-- end resultText -->
+					
+					<div class="resultValue">
+						<!-- 60% result -->
+						<?php
+							//add 20% to the start date for 2nd result
+							date_add($start_date, 
+								date_interval_create_from_date_string($twenty_percent . 'days'));
+							//display to screen
+							print (string)date_format($start_date, 'm-d-Y')
+						?>
+					</div> <!--end resultValue -->
+				</div> <!--end row -->
+			</div> <!--end results -->	
+			
 			<input type="submit" value="Calculate" name="submit" />
 		</form>
 			
-		<div id="results">
-			<div class="row">
-				<div class="resultText">
-					To recieve an 80% refund for this class, students must 
-					drop before:
-				</div> <!-- end resultText -->
-				<div class="resultValue">
-					<!-- 80% result -->
-					<?php
-						//add 11% value to start date to find first result
-						date_add($start_date, 
-							date_interval_create_from_date_string(
-								$eleven_percent . 'days'));
-						//display to screen		
-						print (string)date_format($start_date, 'm-d-Y');
-						//return startdate value to original date
-						date_sub($start_date, 
-							date_interval_create_from_date_string(
-							$eleven_percent . 'days'));
-					?>
-				</div> <!--end resultValue -->
-			</div> <!--end row -->
-			<div class="row">
-				<div class="resultText">
-					To recieve a 60% refund for this class, students must 
-					drop before:
-				</div> <!-- end resultText -->
-				<div class="resultValue">
-					<!-- 60% result -->
-					<?php
-						//add 20% to the start date for 2nd result
-						date_add($start_date, 
-							date_interval_create_from_date_string(
-							$twenty_percent . 'days'));
-						//display to screen
-						print (string)date_format($start_date, 'm-d-Y')
-					?>
-				</div> <!--end resultValue -->
-			</div> <!--end row -->
-		</div> <!--end results -->
-
-		
-		
 		<p id="disclaimer">
+		
 			This refund estimation calculator is provided to offer guidance and
 			estimation of refund levels based on the start and end date of a 
 			class as indicated in the class scheduling system.  Actual refunds 
@@ -98,9 +95,8 @@
 			college refund policy.
 			
 			<a href="https://madisoncollege.edu/enrollment-terms-conditions"
-		   target="_blank" id="refundPolicy">Refund Policy</a>
+			   target="_blank" 
+			   id="refundPolicy">Refund Policy</a>
 		</p>
-		
-		
 	</body>
 </html>

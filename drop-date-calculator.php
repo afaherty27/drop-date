@@ -37,38 +37,15 @@
 		<h1>Refund Estimation Calculator</h1>
 		
 		<form method="post" action="drop-date-calculator.php">
-			<label for="startdate">Course Start Date</label>
-			<input type="text" id="startdate" name="startdate" /><br />
+			<label class="blurb" for="startdate">Course Start Date</label>
+			<input type="text" id="startdate" value="<?php print $start_input ?>" name="startdate" /><br />
 		
-			<label for="enddate">Course End Date</label>
-			<input type="text" id="enddate" name="enddate" /><br />
+			<label class="blurb" for="enddate">Course End Date</label>
+			<input type="text" id="enddate" value="<?php print $end_input ?>"name="enddate" /><br />
     
 			<input type="submit" value="Calculate" name="submit" />
 		</form>
-		
-		<div id="enteredDates">
-			<div class="row">
-				<div class="blurb">
-					Course start date
-				</div><!-- end blurb -->
-				<div class="enteredDate">
-					<?php
-						print $start_input;
-					?>
-				</div> <!-- end row -->
-			</div> <!--end row -->
-			<div class="row">
-				<div class="blurb">
-					Course end date
-				</div> <!--end blurb -->
-				<div class="enteredDate">
-					<?php
-						print $end_input;
-					?>
-				</div> <!-- end enteredDate -->
-			</div> <!-- end row -->
-		</div> <!-- end enteredDates -->
-		
+			
 		<div id="results">
 			<div class="row">
 				<div class="resultText">
@@ -109,21 +86,7 @@
 				</div> <!--end resultValue -->
 			</div> <!--end row -->
 		</div> <!--end results -->
-		<?php				
-			//date_add($start_date, 
-			//	date_interval_create_from_date_string($eleven_percent . 'days'));
-			
-			//echo '<br /><br />RESULTS<br />';
-			//echo date for 80% refund
-			//echo 'To receive an 80% refund for this class, students must drop before: ' . (string)date_format($start_date, 'm-d-Y') .  '<br />';
-			
-			//subtract the 11% that was added
-			date_sub($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
-			
-			date_add($start_date, date_interval_create_from_date_string($twenty_percent . 'days'));
-			//echo date for 60% refund
-			//echo 'To recieve a 60% refund for this class, students must drop before: ' . (string)date_format($start_date, 'm-d-Y');
-		?>
+
 		
 		
 		<p id="disclaimer">

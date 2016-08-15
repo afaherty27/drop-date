@@ -2,6 +2,13 @@
 	Author: Adam Faherty
 **/
 
+* {
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #f0ffff;
+}
 
 .blurb, .enteredDate, .resultText, .resultValue  {
 	display: inline-block;
@@ -12,7 +19,7 @@
 }
 
 .blurb {
-	/*background-color: red;*/
+	background-color: #99CCFF;
 	width: 9%;
 	font-variant: small-caps;
 }
@@ -23,13 +30,13 @@
 }
 
 .resultText {
-	/*background-color: pink;*/
+	background-color: #6699CC;
 	width: 15%;
 	
 }
 
 .resultValue {
-	/*background-color: orange;*/
+	background-color: #BBBBBB;
 }
 
 #disclaimer {

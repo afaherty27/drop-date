@@ -7,46 +7,36 @@
 }
 
 body {
-	background-color: #f0ffff;
+	/*background-color: #f0ffff;*/
+	background-color: azure;
+}
+
+#results {
+	margin-top: 3%;
 }
 
 .blurb, .enteredDate, .resultText, .resultValue, .dateEntry  {
 	display: inline-block;
 }
 
-.row {
-	/*background-color: green;*/	
+.blurb, .resultText {
+	width: 65%;
 }
-
-.blurb, .dateEntry {
-	width: 7%;
-}
-
-/*
-.blurb {
-	background-color: #99CCFF;
-}*/
 
 .enteredDate {
-	/*background-color: blue;*/
 	width: 5%
 }
 
-.resultText {
-	background-color: #6699CC;
-	width: 16%;
-	border-bottom: 1px black solid;
-	
+.resultValue {
+	margin-left: -.3%;
 }
 
-.resultValue {
-	background-color: #BBBBBB;
-	margin-left: -.3%;
-	border-bottom: 3px black solid;
+#disclaimer, .resultText, .resultValue, .blurb, .date {
+	font-size: small;
 }
 
 #disclaimer {
-	width: 33%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -56,6 +46,13 @@ body {
 }
 
 #startdate, #enddate {
-	width: 3.7%;
+	width: 25%;
 	text-align: center;
+}
+
+#calc {
+	/*TODO: alter appearance of button*/
+	margin-left: 37%;
+	width: 24%;
+	
 }

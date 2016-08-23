@@ -52,7 +52,8 @@
 				   value="<?php print $end_input ?>"
 				   name="enddate" /><br />
     
-			<div id="results">			
+			<div id="results">
+				<hr class="resultSplit" />
 				<div class="row">				
 					<div class="resultText">					
 						To recieve an 80% refund for this class, students must 
@@ -71,7 +72,7 @@
 						?>
 					</div> <!--end resultValue -->
 				</div> <!--end row -->
-				
+				<hr class="resultSplit" />
 				<div class="row">				
 					<div class="resultText">					
 						To recieve a 60% refund for this class, students must 
@@ -90,8 +91,8 @@
 					</div> <!--end resultValue -->
 				</div> <!--end row -->
 			</div> <!--end results -->	
-			
-			<input type="submit" value="Calculate" name="submit" />
+			<hr class="resultSplit" />
+			<input id="calc" type="submit" value="Calculate" name="submit" />
 		</form>
 			
 		<p id="disclaimer">

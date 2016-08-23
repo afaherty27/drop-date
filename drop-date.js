@@ -1,11 +1,10 @@
-//STEP1
+/*
+	Adam Faherty
+	JS file  for date entry on drop date calculator app
+*/
 $(document).ready(function() {
 
-	//STEP2
-	//datepicker on start date
+	//datepicker
     $("#startdate").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
-	
-	//STEP 3
-	//datepicker on end date
 	$("#enddate").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
 });

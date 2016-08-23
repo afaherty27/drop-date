@@ -42,14 +42,14 @@
 			<input type="text" 
 				   id="startdate" 
 				   class="date" 
-				   value="<?php print $start_input ?>" 
+				   value="<?php print (string)date_format($start_date, 'M d, Y'); ?>" 
 				   name="startdate" /><br />
 		
 			<label class="blurb" for="enddate">Course End Date</label>
 			<input type="text" 
 			       id="enddate" 
 				   class="date" 
-				   value="<?php print $end_input ?>"
+				   value="<?php print (string)date_format($end_date, 'M d, Y'); ?>"
 				   name="enddate" /><br />
     
 			<div id="results">
@@ -66,7 +66,7 @@
 							//add 11% value to start date to find first result
 							date_add($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
 							//display to screen		
-							print (string)date_format($start_date, 'm-d-Y');
+							print (string)date_format($start_date, 'M d, Y');
 							//return startdate value to original date
 							date_sub($start_date, date_interval_create_from_date_string($eleven_percent . 'days'));
 						?>
@@ -86,7 +86,7 @@
 							date_add($start_date, 
 								date_interval_create_from_date_string($twenty_percent . 'days'));
 							//display to screen
-							print (string)date_format($start_date, 'm-d-Y')
+							print (string)date_format($start_date, 'M d, Y')
 						?>
 					</div> <!--end resultValue -->
 				</div> <!--end row -->

@@ -8,14 +8,29 @@
 
 body {
 	/*background-color: #f0ffff;*/
-	background-color: azure;
+	/*background-color: azure;*/
 }
+
+#logo {
+	width: 40%;
+	height: 40%;	
+}
+
+h1 {
+	display: block;
+	width: 55%;
+	font-size: medium;
+	margin-top: -17%;
+	margin-left: 43%;
+}
+
+#instructions{margin-top: 10%;}
 
 #results {
 	margin-top: 3%;
 }
 
-.blurb, .enteredDate, .resultText, .resultValue, .dateEntry  {
+.blurb, .enteredDate, .resultText, .resultValue, .dateEntry,  #logo  {
 	display: inline-block;
 }
 

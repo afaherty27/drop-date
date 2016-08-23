@@ -10,7 +10,7 @@ body {
 	background-color: #f0ffff;
 }
 
-.blurb, .enteredDate, .resultText, .resultValue  {
+.blurb, .enteredDate, .resultText, .resultValue, .dateEntry  {
 	display: inline-block;
 }
 
@@ -18,11 +18,14 @@ body {
 	/*background-color: green;*/	
 }
 
+.blurb, .dateEntry {
+	width: 7%;
+}
+
+/*
 .blurb {
 	background-color: #99CCFF;
-	width: 9%;
-	font-variant: small-caps;
-}
+}*/
 
 .enteredDate {
 	/*background-color: blue;*/
@@ -31,12 +34,15 @@ body {
 
 .resultText {
 	background-color: #6699CC;
-	width: 15%;
+	width: 16%;
+	border-bottom: 1px black solid;
 	
 }
 
 .resultValue {
 	background-color: #BBBBBB;
+	margin-left: -.3%;
+	border-bottom: 3px black solid;
 }
 
 #disclaimer {
@@ -47,4 +53,9 @@ body {
 #refundPolicy {
 	text-align: center;
 	display: block;
+}
+
+#startdate, #enddate {
+	width: 3.7%;
+	text-align: center;
 }

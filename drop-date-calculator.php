@@ -39,10 +39,18 @@
 		<form method="post" action="drop-date-calculator.php">
 			<h4 id="instructions"> Please provide the following information:</h4>
 			<label class="blurb" for="startdate">Course Start Date</label>
-			<input type="text" id="startdate" value="<?php print $start_input ?>" name="startdate" /><br />
+			<input type="text" 
+				   id="startdate" 
+				   class="date" 
+				   value="<?php print $start_input ?>" 
+				   name="startdate" /><br />
 		
 			<label class="blurb" for="enddate">Course End Date</label>
-			<input type="text" id="enddate" value="<?php print $end_input ?>"name="enddate" /><br />
+			<input type="text" 
+			       id="enddate" 
+				   class="date" 
+				   value="<?php print $end_input ?>"
+				   name="enddate" /><br />
     
 			<div id="results">			
 				<div class="row">				

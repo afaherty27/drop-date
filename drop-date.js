@@ -5,5 +5,5 @@
 $(document).ready(function() {
 
 	//datepicker
-  	$(".date").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
+  	$(".date").datepicker({dateFormat: 'M d, yy',changeMonth: true, changeYear: true});
 });

@@ -23,7 +23,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Drop Date Calulator</title>
+		<title>Drop Date Calculator</title>
 		<link rel="stylesheet" href="drop-date-calculator.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -34,6 +34,7 @@
 	
 	<body>
 		
+		<img alt="logo" id="logo" src="logo.png" />
 		<h1>Refund Estimation Calculator</h1>
 		
 		<form method="post" action="drop-date-calculator.php">

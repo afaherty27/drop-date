@@ -14,13 +14,25 @@
 	<h1>Refund Estimation Calculator</h1>
 	<form method="post" action="drop-date-calculator.php">
 		<h4 id="instructions"> Please provide the following information:</h4>
-		<label for="startdate" class="dateEntry">Course Start Date</label>
+		<label class="blurb"for="startdate" >Course Start Date</label>
 		<input type="text" id="startdate" class="date" name="startdate" /><br />
 	
-		<label for="enddate" class="dateEntry">Course End Date</label>
+		<label class="blurb"for="enddate">Course End Date</label>
 		<input type="text" id="enddate" class="date" name="enddate" /><br />
     
-		<input type="submit" value="Calculate" name="submit" />
+		<input id="calc" type="submit" value="Calculate" name="submit" />
 	</form>
+	
+	<p id="disclaimer" style="margin-top: 40.52%">
+			This refund estimation calculator is provided to offer guidance and
+			estimation of refund levels based on the start and end date of a 
+			class as indicated in the class scheduling system.  Actual refunds 
+			will be processed based on the date the drop enrollemnt transaction 
+			is completed/recorded and will be issued in compliance with the 
+			college refund policy.
+			
+			<a href="https://madisoncollege.edu/enrollment-terms-conditions"
+			   target="_blank" 
+			   id="refundPolicy">Refund Policy</a>
 </body>
 </html>

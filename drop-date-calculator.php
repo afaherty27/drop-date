@@ -37,7 +37,7 @@
 		<img alt="logo" id="logo" src="logo.png" />
 		<h1>Refund Estimation Calculator</h1>
 		
-		<form method="post" action="drop-date-calculator.php">
+		<form action="drop-date-calculator.php" onsubmit="return validation();" method="post">
 			<h4 id="instructions"> Please provide the following information:</h4>
 			<label class="blurb" for="startdate">Course Start Date</label>
 			<input type="text" 

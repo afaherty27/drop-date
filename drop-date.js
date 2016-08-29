@@ -17,18 +17,18 @@ function validation() {
 	var startDate = $("#startdate").datepicker({ dateFormat: 'MM' }).val();
 	var endDate   = $("#enddate").datepicker({ dateFormat: 'dd, MM, yyyy' }).val();	
 	
+	
+	// validate that end date is after start date
+	var endBeforeStart = "<h5 class='fail'>Course Start Date must be before Course End Date</h5>";
+	
 	if (startDate > endDate) {
-		alert("testing intentional fail has been successfull");
-		$("#startdate").value = "";
-		$("#enddate").value = "";
-		
+		$("#form").append(endBeforeStart);
 		return false;
 	}
 			
-	// validate that end date is after start date
 	
 	// validate dates are not the same date
 	
-	// AJAX call to run calculator
+	//remove results if recalculating, and validation fails again
 
 }

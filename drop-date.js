@@ -14,6 +14,10 @@ $(document).ready(function() {
 */
 function validation() {
 	
+	//clear error messages and highlights
+	$(".fail").remove();
+	$("#startdate").removeAttr("style");
+	
 	var startDate = $("#startdate").datepicker({ dateFormat: 'MM' }).val();
 	var endDate   = $("#enddate").datepicker({ dateFormat: 'dd, MM, yyyy' }).val();	
 	

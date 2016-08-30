@@ -19,7 +19,9 @@ h1 {
 	margin-left: 43%;
 }
 
-#instructions{margin-top: 10%;}
+#instructions{
+	margin-top: 10%;
+}
 
 #results {
 	margin-top: 3%;

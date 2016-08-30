@@ -20,14 +20,15 @@ function validation() {
 	
 	// validate that end date is after start date
 	var endBeforeStart = "<h5 class='fail'>Course Start Date must be before Course End Date</h5>";
+	var equalDates	   = "<h5 class='fail'>Courses cannot start and end on same date</h5>";
 	
 	if (startDate > endDate) {
 		$("#form").append(endBeforeStart);
+		$("#startdate").attr('style', 'border: red solid 2px');
 		return false;
 	}
 			
-	
-	// validate dates are not the same date
+
 	
 	//remove results if recalculating, and validation fails again
 

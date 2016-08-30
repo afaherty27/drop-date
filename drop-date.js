@@ -14,14 +14,15 @@ $(document).ready(function() {
 */
 function validation() {
 	
-	//clear error messages and highlights
-	$(".fail").remove();
-	$("#startdate").removeAttr("style");
-	
 	var startDate = $("#startdate").datepicker({ dateFormat: 'MM' }).val();
 	var endDate   = $("#enddate").datepicker({ dateFormat: 'dd, MM, yyyy' }).val();	
 	
+	//clear error messages and highlights
+	$(".fail").remove();
+	$("#startdate").removeAttr("style");
+	$("#enddate").removeAttr("style");
 	
+
 	// validate that end date is after start date
 	var endBeforeStart = "<h5 class='fail'>Course Start Date must be before Course End Date</h5>";
 	var equalDates	   = "<h5 class='fail'>Courses cannot start and end on same date</h5>";
@@ -33,7 +34,11 @@ function validation() {
 	}
 			
 
-	
-	//remove results if recalculating, and validation fails again
-
+	// validate dates are not the same date
+	if (startDate == endDate) {
+		$("#form").append(equalDates);
+		$("#startdate").attr('style', 'border: red solid 2px');
+		$("#enddate").attr('style', 'border: red solid 2px');
+		return false;
+	}
 }
